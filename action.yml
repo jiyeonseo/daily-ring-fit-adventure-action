@@ -1,0 +1,30 @@
+name: 'DailyRingFitAdventureAction'
+description: ''
+inputs:
+  naver_ocr_url:  
+    description: "Naver NCP OCR API"
+    required: true
+    default: ""
+  naver_secret_key:
+    description: "Naver NCP API secret key"
+    required: true
+    default: ""
+  twt_id:
+    description: "twitter id"
+    required: true
+    default: ""
+  twt_consumer_key:
+    description: "twitter api consumer key"
+    required: true
+    default: ""
+  twt_consumer_secret:
+    description: "twitter api consumer secret"
+    required: true
+    default: ""
+  github_access_token:
+    description: "github access token"
+    required: true
+    default: ""
+runs:
+  using: 'node12'
+  main: 'dist/index.js'

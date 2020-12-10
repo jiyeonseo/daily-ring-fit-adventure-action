@@ -1,0 +1,22 @@
+name: "ringfit-batch"
+on:
+  schedule:
+    - cron: '0 14 * * *' 
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ./
+      with:
+        naver_ocr_url: ${{ secrets.NAVER_OCR_URL }}
+        naver_secret_key: ${{ secrets.NAVER_OCR_SECRET }}
+        twt_id: "seojeee"
+        twt_consumer_key: ${{ secrets.TWT_CONSUMER_KEY }}
+        twt_consumer_secret: ${{ secrets.TWT_CONSUMER_SECRET }}
+        github_access_token : ${{ secrets.GH_ACCESS_TOKEN }}
+        
