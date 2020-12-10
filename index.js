@@ -145,7 +145,7 @@ async function run() {
     const todays = tweets.filter((twt) => {
       if (twt.text.includes("#RingFitAdventure")) {
         const created_at = dayjs(twt.created_at).add(9, "hour");
-        const today = dayjs().add(9, "hour").subtract(2, 'day'); // for test 
+        const today = dayjs().add(9, "hour")
 
         if (today.isSame(created_at, "day")) {
           return true;
@@ -171,9 +171,9 @@ async function run() {
       .addConfig("user.name", "jiyeonseo")
       .addConfig("user.email", "seojeee@gmail.com")
       .commit("update")
-      // .push(["-u", "origin", "master"], () => {
-      //   core.info("push done");
-      // })
+      .push(["-u", "origin", "master"], () => {
+        core.info("push done");
+      })
       .catch((err) => console.log("err::", err));
   } catch (error) {
     // core.setFailed(error.message);

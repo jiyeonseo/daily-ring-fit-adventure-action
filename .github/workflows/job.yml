@@ -2,9 +2,6 @@ name: "ringfit-batch"
 on:
   schedule:
     - cron: '0 14 * * *' 
-  push:
-    branches:
-      - main
 
 jobs:
   test:
