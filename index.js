@@ -145,7 +145,7 @@ async function run() {
     const todays = tweets.filter((twt) => {
       if (twt.text.includes("#RingFitAdventure")) {
         const created_at = dayjs(twt.created_at).add(9, "hour");
-        const today = dayjs().add(9, "hour").subtract(2, 'day');
+        const today = dayjs().add(9, "hour").subtract(2, 'day'); // for test 
 
         if (today.isSame(created_at, "day")) {
           return true;
